@@ -303,6 +303,49 @@ function code(string) {
   return code;
 }
 
+function checkBook(book) {
+  book.toLowerCase();
+  switch (book) {
+    case "ezekiel":
+      book = "ezk";
+      break;
+    case "judges":
+      book = "jdg";
+      break;
+    case "philippians":
+      book = "php";
+      break;
+    case "nahum":
+      book = "nam";
+      break;
+    case "mark":
+      book = "mrk";
+      break;
+    case "john":
+      book = "jhn";
+      break;
+    case "philemon":
+      book = "phm";
+      break;
+    case "james":
+      book = "jas";
+      break;
+    case "1john":
+      book = "1jn";
+      break;
+    case "2john":
+      book = "2jn";
+      break;
+    case "3john":
+      book = "3jn";
+      break;
+    default:
+      book = book.substring(0, 3);
+      break;
+  }
+  return book;
+}
+
 app.get("/", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.json("WELCOME TO MY BIBLE API");
@@ -310,7 +353,8 @@ app.get("/", (req, res) => {
 
 // return only 1 call
 app.get("/verse/:bookID/:chapterID/:verseID", (req, res) => {
-  const verse = `${req.params.bookID.substring(0, 3)}.${req.params.chapterID}.${
+  let book = checkBook(req.params.bookID);
+  const verse = `${book}.${req.params.chapterID}.${
     req.params.verseID
   }`;
   let cd = code(verse);
