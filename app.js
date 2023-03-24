@@ -371,19 +371,17 @@ app.get("/verse/:bookID/:chapterID/:verseID", (req, res) => {
       $(".center.pt3", html).each(function () {
         const verse = $(this).find(".tc.f3.f2-m").text();
         const text = $(this).find(".yv-gray50.lh-copy.f3-m").text();
-        text.split(".");
-        text.split(",");
-        let format_array = text.split(" ");
+       // text.split(".");
+        //text.split(",");
+        //let format_array = text.split(" ");
 
-        let text_array = format(format_array);
+        //let text_array = format(format_array);
 
-        let id = code(firstLetterUppercaseVerse);
+        //let id = code(firstLetterUppercaseVerse);
 
         bibleVerses.push({
-          id,
           verse,
-          text,
-          text_array,
+          text         
         });
       });
 
