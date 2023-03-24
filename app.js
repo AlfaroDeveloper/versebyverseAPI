@@ -92,7 +92,7 @@ function code(string) {
     case "Jos":
       bookCode = "06";
       break;
-    case "Jud":
+    case "Jdg":
       bookCode = "07";
       break;
     case "Rut":
@@ -137,7 +137,7 @@ function code(string) {
     case "Ecc":
       bookCode = "21";
       break;
-    case "Son":
+    case "Sng":
       bookCode = "22";
       break;
     case "Isa":
@@ -149,7 +149,7 @@ function code(string) {
     case "Lam":
       bookCode = "25";
       break;
-    case "Eze":
+    case "Ezk":
       bookCode = "26";
       break;
     case "Dan":
@@ -173,7 +173,7 @@ function code(string) {
     case "Mic":
       bookCode = "33";
       break;
-    case "Nah":
+    case "Nam":
       bookCode = "34";
       break;
     case "Hab":
@@ -194,13 +194,13 @@ function code(string) {
     case "Mat":
       bookCode = "40";
       break;
-    case "Mar":
+    case "Mrk":
       bookCode = "41";
       break;
     case "Luk":
       bookCode = "42";
       break;
-    case "Joh":
+    case "Jhn":
       bookCode = "43";
       break;
     case "Act":
@@ -221,7 +221,7 @@ function code(string) {
     case "Eph":
       bookCode = "49";
       break;
-    case "Phi":
+    case "Php":
       bookCode = "50";
       break;
     case "Col":
@@ -242,7 +242,7 @@ function code(string) {
     case "Tit":
       bookCode = "56";
       break;
-    case "Phi":
+    case "Phm":
       bookCode = "57";
       break;
     case "Heb":
@@ -257,13 +257,13 @@ function code(string) {
     case "2pe":
       bookCode = "61";
       break;
-    case "1jo":
+    case "1jn":
       bookCode = "62";
       break;
-    case "2jo":
+    case "2jn":
       bookCode = "63";
       break;
-    case "3jo":
+    case "3jn":
       bookCode = "64";
       break;
     case "Jud":
