@@ -366,7 +366,7 @@ app.get("/verse/:bookID/:chapterID/:verseID", (req, res) => {
   
   axios
     .get(
-      `https://www.bible.com/bible/100/${book}.NASB1995`
+      `https://www.bible.com/bible/100/${verse}.NASB1995`
     )
     .then((response) => {
       let html = response.data;
