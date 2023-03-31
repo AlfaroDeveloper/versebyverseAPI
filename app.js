@@ -359,10 +359,8 @@ app.get("/", (req, res) => {
 // return only 1 call
 app.get("/verse/:bookID/:chapterID/:verseID", (req, res) => {
   let book = checkBook(req.params.bookID);
-  const verse = `${book}.${req.params.chapterID}.${
-    req.params.verseID
-  }`;
-  let cd = code(verse);
+  const verse = `${book}.${req.params.chapterID}.${req.params.verseID}`;
+  
   
   axios
     .get(
