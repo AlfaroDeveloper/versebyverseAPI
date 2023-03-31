@@ -343,6 +343,11 @@ function checkBook(book) {
       book = book.substring(0, 3);
       break;
   }
+  if(book.includes("1") || book.includes("2")){
+    book = book[0] + book[1].toUpperCase() + book[2];  
+  }else{
+    book = book[0].toUpperCase() + book.slice(1);
+  }
   return book;
 }
 
@@ -358,11 +363,10 @@ app.get("/verse/:bookID/:chapterID/:verseID", (req, res) => {
     req.params.verseID
   }`;
   let cd = code(verse);
-  const firstLetterUppercaseVerse =
-    verse.charAt(0).toUpperCase() + verse.slice(1);
+  
   axios
     .get(
-      `https://www.bible.com/bible/100/${firstLetterUppercaseVerse}.NASB1995`
+      `https://www.bible.com/bible/100/${book}.NASB1995`
     )
     .then((response) => {
       let html = response.data;
